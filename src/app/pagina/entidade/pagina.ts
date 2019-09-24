@@ -1,4 +1,4 @@
 export class Pagina {
-  pai : string;
-  mae : string;
+  mae:string;
+  pai:string;
 }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { Usuario } from '../entidade/usuario';
+import { AngularFireAuth } from "angularfire2/auth";
 
 @Component({
   selector: 'app-home',
@@ -7,19 +9,23 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private menu : MenuController ) { }
-  openFirst (){
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
-    openEnd(){
-      this.menu.open('end');
-    }
-    openCustom(){
-      this.menu.enable(true, 'custom');
-      this.menu.open('custom');
-    }
-  ngOnInit() {
+  usuario: Usuario = new Usuario();
+  constructor(private afAuth: AngularFireAuth, private router: Router) { }
+  logar() {
+    this.afAuth.auth.signInWithEmailAndPassword(this.usuario.email, this.usuario.senha).then(
+      () => { this.router.navigate(['pagina']); }
+    ).catch((erro) => console.log(erro));
   }
 
+  logout() {
+    this.afAuth.auth.signOut();
+    this.router.navigate(['home']);
+  }
+   redefinir(){
+     alert('verifique seu email');
+     this.afAuth.auth.sendPasswordResetEmail(this.usuario.email).then(
+       ()=> alert('verifique seu email'));{ this.router.navigate([]);}
+
+
+   }
 }

@@ -1,52 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-menu-button auto-hide> </ion-menu-button>
-    <ion-title> Baby Ruru</ion-title>
+    <ion-title>
+     Baby Ruru
+    </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-img src="../../../assets/img/tenor.gif"></ion-img>
+
+  <ion-content>
+    <ion-img src="../../../assets/img/tenor.gif"></ion-img>
   </ion-content>
-<ion-menu side="start" menuId="first">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Start menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-<ion-content>
-<ion-list>
-  <ion-item>login</ion-item>
-  <ion-item>cadastro</ion-item>
-  <ion-item></ion-item>
-  <ion-item></ion-item>
-    </ion-list>
-</ion-content>
-</ion-menu>
-
-<ion-menu side="start" menuId="custom" class="my-custom-menu">
-  <ion-header>
-    <ion-toolbar color="tertianry">
-      <ion-title>Baby</ion-title>
-    </ion-toolbar>
-  </ion-header>
-<ion-content>
-<ion-list>
-  <ion-item><ion-button color="dark"href="salvar">Login</ion-button></ion-item>
-  <ion-item><ion-button color="dark"href="login">cadastro</ion-button></ion-item>
-    </ion-list>
-</ion-content>
-</ion-menu>
-
-<ion-menu side="end" menuId="push">
-  <ion-header>
-    <ion-toolbar color="dager">
-      <ion-title>End menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-<ion-content>
-<ion-list>
-  <ion-item>Menu item</ion-item>
-  </ion-list>
-</ion-content>
-</ion-menu>
-<ion-router-outlet main></ion-router-outlet>
+  <ion-content>
+      <p style="text-align:center;">Login</p>
+    <ion-item>
+      <ion-label position="flouting">Email:</ion-label>
+      <ion-input type="text" placeholder="insira o seu email" name="email" [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="flouting">Senha:</ion-label>
+      <ion-input type="password" name="senha" placeholder="insira sua senha" [(ngModel)]="usuario.senha"></ion-input>
+    </ion-item>
+    <ion-button expand=full (click)="logar()">Acessar</ion-button>
+    <ion-button expand="full" href="cadastro">Cadastrar</ion-button>
+    <ion-button expand=full (click)="redefinir()">Esqueceu a senha ?</ion-button>
+  </ion-content>

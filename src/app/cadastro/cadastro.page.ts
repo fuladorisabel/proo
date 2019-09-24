@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../entidade/usuario';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from "angularfire2/auth";
-import { Usuario } from '../usuario/entidade/usuario';
 
 @Component({
   selector: 'app-cadastro',
-  templateUrl: './cadastro.Component.html',
+  templateUrl: './cadastro.page.html',
+  styleUrls: ['./cadastro.page.scss'],
 })
-export class CadastroComponent implements OnInit {
+export class CadastroPage implements OnInit {
   usuario: Usuario = new Usuario();
   constructor(private afAuth: AngularFireAuth, private router: Router) { }
   ngOnInit() {

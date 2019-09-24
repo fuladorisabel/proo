@@ -18,12 +18,13 @@ import { FormsModule } from '@angular/forms';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyCCtN3ltcee1Uv4TfxVQNenhPobDV3H-4M",
-    authDomain: "proo-1e2f4.firebaseapp.com",
-    databaseURL: "https://proo-1e2f4.firebaseio.com",
-    projectId: "proo-1e2f4",
-    storageBucket: "proo-1e2f4.appspot.com",
-    messagingSenderId: "670196486432",
-    appId: "1:670196486432:web:27710117246b5875"
+   authDomain: "proo-1e2f4.firebaseapp.com",
+   databaseURL: "https://proo-1e2f4.firebaseio.com",
+   projectId: "proo-1e2f4",
+   storageBucket: "proo-1e2f4.appspot.com",
+   messagingSenderId: "670196486432",
+   appId: "1:670196486432:web:27710117246b5875"
+
     }), AngularFireDatabaseModule
 
   ],

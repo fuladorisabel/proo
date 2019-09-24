@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { AngularFireAuth } from "angularfire2/auth";
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListarPage } from './listar.page';
+import { CadastroPage } from './cadastro.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ListarPage
+    component: CadastroPage
   }
 ];
 
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ListarPage]
+  declarations: [CadastroPage],
+  providers:[AngularFireAuth]
 })
-export class ListarPageModule {}
+export class CadastroPageModule {}

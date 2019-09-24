@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { AngularFireAuth } from "angularfire2/auth";
+
 import { IonicModule } from '@ionic/angular';
 
-import { PaginaPage } from './pagina.page';
+import { NovaPage } from './nova.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PaginaPage
+    component: NovaPage
   }
 ];
 
@@ -21,7 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PaginaPage],
-  providers:[AngularFireAuth]
+  declarations: [NovaPage]
 })
-export class PaginaPageModule {}
+export class NovaPageModule {}

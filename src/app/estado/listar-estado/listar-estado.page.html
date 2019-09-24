@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Estados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let estado of listaFiltro |">
+      <ion-label>{{ estado.nome }}</ion-label>
+      <ion-label>{{ estado.sigla }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" shape="round" href="salvar-estado">voltar</ion-button>
+</ion-content>
