@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista de Estados</ion-title>
+    <ion-title>lista de estado</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<ion-searchbar [(ngModel)]="valor" (ionChange)="filtrar()"></ion-searchbar>
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let estado of listaFiltro |">
+    <ion-item *ngFor="let estado of listaFiltro">
       <ion-label>{{ estado.nome }}</ion-label>
       <ion-label>{{ estado.sigla }}</ion-label>
+      <ion-button (click)="excluir(estado.key)"><ion-icon name="close-circle"></ion-icon></ion-button>
+     <ion-button (click)="alterar(estado.key)"><ion-icon name="create"></ion-icon></ion-button>
     </ion-item>
   </ion-list>
   <ion-button expand="full" shape="round" href="salvar-estado">voltar</ion-button>

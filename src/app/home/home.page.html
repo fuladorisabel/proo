@@ -8,8 +8,6 @@
 
   <ion-content>
     <ion-img src="../../../assets/img/tenor.gif"></ion-img>
-  </ion-content>
-  <ion-content>
       <p style="text-align:center;">Login</p>
     <ion-item>
       <ion-label position="flouting">Email:</ion-label>
@@ -19,7 +17,7 @@
       <ion-label position="flouting">Senha:</ion-label>
       <ion-input type="password" name="senha" placeholder="insira sua senha" [(ngModel)]="usuario.senha"></ion-input>
     </ion-item>
-    <ion-button expand=full (click)="logar()">Acessar</ion-button>
-    <ion-button expand="full" href="cadastro">Cadastrar</ion-button>
-    <ion-button expand=full (click)="redefinir()">Esqueceu a senha ?</ion-button>
+    <ion-button expand=full shape="round" (click)="logar()">Acessar</ion-button>
+    <ion-button expand="full" shape="round" href="cadastro">Cadastrar</ion-button>
+    <ion-button expand=full shape="round" (click)="redefinir()">Esqueceu a senha ?</ion-button>
   </ion-content>

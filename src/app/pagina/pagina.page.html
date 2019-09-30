@@ -5,27 +5,24 @@
 </ion-header>
 
 <ion-content>
-<p> Você está logado! </p>
-<p> Por favor indique as suas caracteristicas !</p>
+  <p> Você está logado! </p>
+  <p> Por favor indique as suas caracteristicas !</p>
   <ion-item>
-  <ion-label>Olhos do Pai</ion-label>
-  <ion-input [(ngModel)] ="pagina.pai"></ion-input>
-  <ion-select value="brown" okText="Ok" cancelText="voltar">
-    <ion-select-option value="brown">Azul</ion-select-option>
-    <ion-select-option value="blonde">Castanho</ion-select-option>
-    <ion-select-option value="black">Verde</ion-select-option>
-  </ion-select>
+    <ion-label>Olhos do Pai</ion-label>
+    <ion-select [(ngModel)]="pagina.pai" okText="Ok" cancelText="voltar">
+      <ion-select-option value="azul">Azul</ion-select-option>
+      <ion-select-option value="marrom">marrom</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+    </ion-select>
   </ion-item>
   <ion-item>
-  <ion-label>Olhos da Mãe</ion-label>
-  <ion-input [(ngModel)] ="pagina.mae"></ion-input>
-  <ion-select value="brown" okText="Ok" cancelText="voltar">
-    <ion-select-option value="brown">Azul</ion-select-option>
-    <ion-select-option value="blonde">Castanho</ion-select-option>
-    <ion-select-option value="black">Verde</ion-select-option>
-    <ion-select-option value="black">Preto</ion-select-option>
-  </ion-select>
-    </ion-item>
-
-<ion-button expand="full" href="nova">Proxima</ion-button>
+    <ion-label>Olhos do Mae</ion-label>
+    <ion-select [(ngModel)]="pagina.mae" okText="Ok" cancelText="voltar">
+      <ion-select-option value="azul">Azul</ion-select-option>
+      <ion-select-option value="marrom">marrom</ion-select-option>
+      <ion-select-option value="verde">Verde</ion-select-option>
+    </ion-select>
+  </ion-item>
+    <ion-button expand="full" shape="round" (click)="olhos()">Os olhos do seu Baby Ruru sera?</ion-button>
+        <ion-button expand="full" shape="round" href="nova">Proxima</ion-button>
 </ion-content>
